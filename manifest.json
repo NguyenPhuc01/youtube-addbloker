@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Blocker by PhucNguyen",
+  "version": "1.0",
+  "description": "Chặn quảng cáo khi xem YouTube.",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
