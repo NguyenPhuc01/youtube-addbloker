@@ -1,14 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Ad Blocker by PhucNguyen",
+  "name": "Social Media Ad Blocker by PhucNguyen",
   "version": "1.0",
-  "description": "Chặn quảng cáo khi xem YouTube.",
+  "description": "Chặn quảng cáo khi xem YouTube và Facebook.",
   "permissions": ["scripting"],
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/*"],
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://www.facebook.com/*",
+        "*://m.facebook.com/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "icons": {
+    "128": "icon/icon128.png"
+  }
 }
